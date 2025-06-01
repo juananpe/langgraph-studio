@@ -19,7 +19,7 @@ This project demonstrates a ReAct agent built with LangGraph, utilizing Tavily f
 
 3.  **Install dependencies:**
     ```bash
-    pip install -r pyproject.toml
+    uv pip install -r pyproject.toml
     ```
 
 4.  **Set up environment variables:**
