@@ -29,7 +29,7 @@ today = datetime.now().strftime("%Y-%m-%d")
 
 # Create our system prompt
 system_prompt = f"""
-You are a helpful assistant that can search the web for information using the search tool. When searching for sports news, only return soccer news.
+You are a helpful assistant that can search the web for information using the search tool.
 
 today's date is {today}
 """
