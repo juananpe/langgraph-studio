@@ -9,8 +9,8 @@ dependencies = [
     "langchain-community>=0.3.24",
     "langchain-core>=0.3.63",
     "langchain-openai>=0.3.18",
+    "langchain-tavily>=0.2.0",
     "langgraph>=0.4.7",
     "langgraph-cli[inmem]>=0.2.10",
     "python-dotenv>=1.1.0",
-    "tavily-python>=0.7.3",
 ]
