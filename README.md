@@ -14,12 +14,12 @@ This project demonstrates a ReAct agent built with LangGraph, utilizing Tavily f
 2.  **Create and activate a Python virtual environment:**
     ```bash
     uv venv
-    source .venv/bin/activate
+    source .venv/bin/activate # On Windows use `.venv\Scripts\activate`
     ```
 
 3.  **Install dependencies:**
     ```bash
-    uv pip install -r pyproject.toml
+    uv pip install -r requirements.txt
     ```
 
 4.  **Set up environment variables:**
@@ -28,6 +28,9 @@ This project demonstrates a ReAct agent built with LangGraph, utilizing Tavily f
     TAVILY_API_KEY="your_tavily_api_key"
     ANTHROPIC_API_KEY="your_anthropic_api_key"
     # OPENAI_API_KEY="your_openai_api_key" # Include if used by your project
+    LANGSMITH_TRACING=true
+    LANGSMITH_API_KEY="your_langsmith_api_key"
+    LANGSMITH_PROJECT_NAME="your_project_name"
     ```
     **Important:** The provided `.gitignore` ensures the `.env` file itself is not committed to the repository.
 
