@@ -1,7 +1,7 @@
 {
     "dependencies": ["."],
     "graphs": {
-      "react_agent": "./graph.py:graph"
+      "react_agent": "./longstore.py:agent"
     },
     "env": ".env"
   }
