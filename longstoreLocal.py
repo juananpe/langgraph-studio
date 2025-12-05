@@ -36,7 +36,15 @@ def save_user_info(user_info: UserInfo, runtime: ToolRuntime[Context]) -> str:
         data = json.loads(user_info.info)
     except json.JSONDecodeError:
         return "Error: Invalid JSON format. Please provide valid JSON."
-    store.put(("users",), user_id, data) 
+    
+    # Merge with existing data instead of overwriting
+    existing = store.get(("users",), user_id)
+    if existing and existing.value:
+        merged = {**existing.value, **data}
+    else:
+        merged = data
+    
+    store.put(("users",), user_id, merged) 
     return "Successfully saved user info."
 
 @tool
