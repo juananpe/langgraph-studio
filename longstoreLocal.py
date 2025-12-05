@@ -60,14 +60,18 @@ with PostgresStore.from_conn_string(os.getenv("DATABASE_URL")) as store:
         store=store  # ✅ Keep this
     )
 
-    # Test it
+    # Conversation loop
     if __name__ == "__main__":
-        result = agent.invoke(
-            {"messages": [{"role": "user", "content": "My name is John Smith"}]},
-            context=Context(user_id="user_123")
-        )
-        print("✅ Agent result:", result["messages"][-1].content)
-        
-        # Verify data persisted
-        saved = store.get(("users",), "user_123")
-        print("💾 Saved data:", saved.value if saved else "No data")
+        messages = []
+        print("Start chatting with the agent. Type 'quit' to exit.")
+        while True:
+            user_input = input("You: ")
+            if user_input.lower() == "quit":
+                break
+            messages.append({"role": "user", "content": user_input})
+            result = agent.invoke(
+                {"messages": messages},
+                context=Context(user_id="juanan")
+            )
+            messages = result["messages"]
+            print("Agent:", result["messages"][-1].content)
