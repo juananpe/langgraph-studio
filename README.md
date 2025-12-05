@@ -26,8 +26,8 @@ This project demonstrates a ReAct agent built with LangGraph, utilizing Tavily f
     Create a `.env` file in the root directory (e.g., by copying `.env.example` if one were provided, or create it manually) and add your API keys:
     ```env
     TAVILY_API_KEY="your_tavily_api_key"
-    ANTHROPIC_API_KEY="your_anthropic_api_key"
-    # OPENAI_API_KEY="your_openai_api_key" # Include if used by your project
+    OPENAI_API_KEY="your_openai_api_key" 
+    # ANTHROPIC_API_KEY="your_anthropic_api_key" # Include if used by your project
     LANGSMITH_TRACING=true
     LANGSMITH_API_KEY="your_langsmith_api_key"
     LANGSMITH_PROJECT_NAME="your_project_name"
