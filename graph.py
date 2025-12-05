@@ -35,7 +35,7 @@ today's date is {today}
 """
 
 # Define our model
-model = init_chat_model(model_provider="anthropic", model="claude-3-7-sonnet-latest")
+model = init_chat_model(model_provider="openai", model="gpt-4.1")
 
 # Create a ReactAgent with the tools
 graph = create_react_agent(model=model, tools=tools, prompt=system_prompt)
