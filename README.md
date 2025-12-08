@@ -31,6 +31,7 @@ This project demonstrates a ReAct agent built with LangGraph, utilizing Tavily f
     LANGSMITH_TRACING=true
     LANGSMITH_API_KEY="your_langsmith_api_key"
     LANGSMITH_PROJECT_NAME="your_project_name"
+    DATABASE_URL="postgresql://neondb_owner:your_password@your_host/your_database?sslmode=require&channel_binding=require"
     ```
     **Important:** The provided `.gitignore` ensures the `.env` file itself is not committed to the repository.
 
