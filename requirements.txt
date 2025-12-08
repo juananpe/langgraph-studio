@@ -4,9 +4,9 @@ langchain-core
 langchain-openai
 langchain-tavily
 langgraph
+langgraph-api
 langgraph-cli[inmem]
 python-dotenv
 langgraph-checkpoint-sqlite
-langgraph-checkpoint[local]
 psycopg[binary,pool]
 langgraph-checkpoint-postgres
