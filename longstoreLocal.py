@@ -61,6 +61,9 @@ def get_user_info(runtime: ToolRuntime[Context]) -> str:
 
 # Use as context manager - tables created automatically on first use
 with PostgresStore.from_conn_string(os.getenv("DATABASE_URL")) as store:
+    
+    store.setup()
+
     agent = create_agent(
         model="gpt-4.1",
         tools=[save_user_info, get_user_info],
@@ -79,7 +82,7 @@ with PostgresStore.from_conn_string(os.getenv("DATABASE_URL")) as store:
             messages.append({"role": "user", "content": user_input})
             result = agent.invoke(
                 {"messages": messages},
-                context=Context(user_id="juanan")
+                context=Context(user_id="EHU")
             )
             messages = result["messages"]
             print("Agent:", result["messages"][-1].content)
