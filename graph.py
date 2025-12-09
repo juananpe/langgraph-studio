@@ -1,4 +1,4 @@
-from langgraph.prebuilt import create_react_agent
+from langchain.agents import create_agent
 from langchain.chat_models import init_chat_model
 
 from langchain_tavily import TavilySearch
@@ -31,4 +31,4 @@ today's date is {today}
 model = init_chat_model(model_provider="openai", model="gpt-4.1")
 
 # Create a ReactAgent with the tools
-graph = create_react_agent(model=model, tools=tools, prompt=system_prompt)
+graph = create_agent(model=model, tools=tools, system_prompt=system_prompt)
